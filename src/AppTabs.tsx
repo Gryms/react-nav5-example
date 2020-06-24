@@ -4,6 +4,7 @@ import { AppParamList } from "./AppParamList";
 import { Ionicons } from "@expo/vector-icons";
 import { HomeStack } from "./Home/HomeStack";
 import { SearchStack } from "./Search/SearchStack";
+import { MenuStack } from "./Menu/MenuStack";
 
 interface AppTabsProps {}
 
@@ -22,8 +23,9 @@ export const AppTabs: React.FC<AppTabsProps> = ({}) => {
               : "ios-information-circle-outline";
           } else if (route.name === "Search") {
             iconName = focused ? "ios-list-box" : "ios-list";
+          } else if (route.name === "Menu") {
+            iconName = focused ? "ios-folder-open" : "ios-folder";
           }
-
           // You can return any component that you like here!
           return <Ionicons name={iconName!} size={size} color={color} />;
         },
@@ -35,6 +37,7 @@ export const AppTabs: React.FC<AppTabsProps> = ({}) => {
     >
       <Tabs.Screen name="Home" component={HomeStack} />
       <Tabs.Screen name="Search" component={SearchStack} />
+      <Tabs.Screen name="Menu" component={MenuStack} />
     </Tabs.Navigator>
   );
 };
