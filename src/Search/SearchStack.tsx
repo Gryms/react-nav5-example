@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import { SearchParamList, SearchStackNavProps } from "./SearchParamList";
-import { Center } from "./Center";
+import { Center } from "../Center";
 import { Text, Button, FlatList } from "react-native";
 import faker from "faker";
-import { addProductRoutes } from "./addProductRoutes";
+import { addProductRoutes } from "../addProductRoutes";
 
 interface SearchStackProps {}
 

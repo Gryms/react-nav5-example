@@ -1,12 +1,9 @@
-import React, { useContext } from "react";
+import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { AppParamList } from "./AppParamList";
-import { Center } from "./Center";
-import { Text, Button } from "react-native";
-import { AuthContext } from "./AuthProvider";
 import { Ionicons } from "@expo/vector-icons";
-import { HomeStack } from "./HomeStack";
-import { SearchStack } from "./SearchStack";
+import { HomeStack } from "./Home/HomeStack";
+import { SearchStack } from "./Search/SearchStack";
 
 interface AppTabsProps {}
 

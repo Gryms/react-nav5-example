@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import { AuthParamList, AuthNavProps } from "./AuthParamList";
 import { AuthContext } from "./AuthProvider";
-import { Center } from "./Center";
+import { Center } from "../Center";
 import { Button, Text } from "react-native";
 
 interface AuthStackProps {}

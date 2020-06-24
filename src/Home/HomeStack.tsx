@@ -1,12 +1,12 @@
 import React, { useContext, useRef, useState, useEffect } from "react";
 import { createStackNavigator, HeaderTitle } from "@react-navigation/stack";
-import { Center } from "./Center";
+import { Center } from "../Center";
 import { Text, TouchableOpacity, FlatList, Button } from "react-native";
-import { AuthContext } from "./AuthProvider";
+import { AuthContext } from "../Auth/AuthProvider";
 import faker from "faker";
 import { HomeParamList, HomeStackNavProps } from "./HomeParamList";
-import { Routes } from "./Routes";
-import { addProductRoutes } from "./addProductRoutes";
+import { Routes } from "../Routes";
+import { addProductRoutes } from "../addProductRoutes";
 
 interface HomeStackProps {}
 

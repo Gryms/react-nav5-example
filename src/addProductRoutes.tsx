@@ -1,12 +1,10 @@
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { Text, Button } from "react-native";
-import { HomeStackNavProps, HomeParamList } from "./HomeParamList";
+import { HomeStackNavProps, HomeParamList } from "./Home/HomeParamList";
 import { Center } from "./Center";
 import React, { useState, useRef, useEffect, Props } from "react";
 import { TypedNavigator, StackNavigationState } from "@react-navigation/native";
-import { StackNavigationOptions } from "@react-navigation/stack";
-import { StackNavigationEventMap } from "@react-navigation/stack/lib/typescript/src/types";
-import { SearchParamList, SearchStackNavProps } from "./SearchParamList";
+import { SearchParamList, SearchStackNavProps } from "./Search/SearchParamList";
 
 function Product({ route, navigation }: HomeStackNavProps<"Product">) {
   return (

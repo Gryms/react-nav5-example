@@ -2,9 +2,9 @@ import React, { useState, useEffect, useContext } from "react";
 import { NavigationContainer, RouteProp } from "@react-navigation/native";
 import { ActivityIndicator, AsyncStorage } from "react-native";
 import { Center } from "./Center";
-import { AuthContext } from "./AuthProvider";
+import { AuthContext } from "./Auth/AuthProvider";
 import { AppTabs } from "./AppTabs";
-import { AuthStack } from "./AuthStack";
+import { AuthStack } from "./Auth/AuthStack";
 
 interface RoutesProps {}
 
