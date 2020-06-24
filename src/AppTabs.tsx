@@ -34,6 +34,7 @@ export const AppTabs: React.FC<AppTabsProps> = ({}) => {
         activeTintColor: "tomato",
         inactiveTintColor: "gray",
       }}
+      initialRouteName="Menu"
     >
       <Tabs.Screen name="Home" component={HomeStack} />
       <Tabs.Screen name="Search" component={SearchStack} />

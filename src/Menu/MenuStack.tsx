@@ -5,6 +5,7 @@ import { createDrawerNavigator } from "@react-navigation/drawer";
 import { MenuStackNavProps } from "./MenuParamList";
 import { FlatList } from "react-native-gesture-handler";
 import { Button, View, Text } from "react-native";
+import useWindowDimensions from "../useWindowDimensions";
 import { DrawerActions } from "@react-navigation/native";
 
 interface MenuStackProps {}
@@ -18,7 +19,7 @@ function Feed({ navigation }: MenuStackNavProps<"Feed">) {
         color="blue"
         title="Open Menu"
         onPress={() => {
-          navigation.dispatch(DrawerActions.openDrawer());
+          navigation.dispatch(DrawerActions.toggleDrawer());
         }}
       />
       <FlatList
@@ -40,7 +41,7 @@ function Notifications({ navigation }: MenuStackNavProps<"Notifications">) {
         color="blue"
         title="Open Menu"
         onPress={() => {
-          navigation.dispatch(DrawerActions.openDrawer());
+          navigation.dispatch(DrawerActions.toggleDrawer());
         }}
       />
       <Text>Notifications Screen</Text>
@@ -48,9 +49,11 @@ function Notifications({ navigation }: MenuStackNavProps<"Notifications">) {
   );
 }
 
-export const MenuStack: React.FC<MenuStackProps> = ({}) => {
+export const MenuStack = () => {
+  const { width } = useWindowDimensions();
+
   return (
-    <Drawer.Navigator>
+    <Drawer.Navigator drawerType={width >= 768 ? "permanent" : "front"}>
       <Drawer.Screen name="Feed" component={Feed} />
       <Drawer.Screen name="Notifications" component={Notifications} />
     </Drawer.Navigator>
